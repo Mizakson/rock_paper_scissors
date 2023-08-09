@@ -1,6 +1,11 @@
 // rock paper scissors program
 
 
+// scores
+let playerScore = 0;
+let ComputerScore = 0;
+
+
 /*
 getComputerChoice function
 
@@ -13,7 +18,7 @@ computerChoice is a random element of the rpsArray
 */
 
 function getComputerChoice() {
-    const rpsArray = ['Rock', 'Paper', 'Scissors'];
+    const rpsArray = ['rock', 'paper', 'scissors'];
     const randomInt = Math.floor(Math.random() * 3);
     const computerChoice = rpsArray[randomInt];
     return computerChoice;
@@ -54,3 +59,12 @@ function playRound(playerSelection, computerSelection) {
         return 'WIN --- scissors beats paper';
     }
 }
+
+const playerSelection = 'rock';
+const computerSelection = getComputerChoice();
+
+function game() {
+    
+}
+
+console.log(playRound(playerSelection, computerSelection));
