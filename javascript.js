@@ -24,6 +24,15 @@ function getComputerChoice() {
 playRound function explanation here
 ---
 */
-function playRound(playerSelection, computerSelection) {
 
+function playRound(playerSelection, computerSelection) {
+    if (playerSelection === 'rock' && computerSelection === 'rock') {
+        return 'DRAW --- rock ties with rock'
+    }
+    else if (playerSelection === 'paper' && computerSelection === 'paper') {
+        return 'DRAW --- paper ties with paper'
+    }
+    else if (playerSelection === 'scissors' && computerSelection === 'scissors') {
+        return 'DRAW --- scissors ties with scissors'
+    }
 }
