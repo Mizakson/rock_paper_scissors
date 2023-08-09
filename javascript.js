@@ -96,6 +96,9 @@ function game() {
     else if (computerScore > playerScore) {
         return 'You lose! Better luck next time!'
     }
+    else {
+        return 'You tied! Try again!'
+    }
 }
 
 game();
