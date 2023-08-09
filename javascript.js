@@ -44,4 +44,13 @@ function playRound(playerSelection, computerSelection) {
     else if (playerSelection === 'scissors' && computerSelection === 'rock') {
         return 'LOSS --- rock beats scissors';
     }
+    else if (playerSelection === 'rock' && computerSelection === 'scissors') {
+        return 'WIN --- rock beats scissors';
+    }
+    else if (playerSelection === 'paper' && computerSelection === 'rock') {
+        return 'WIN --- paper beats rock';
+    }
+    else if (playerSelection === 'scissors' && computerSelection === 'paper') {
+        return 'WIN --- scissors beats paper';
+    }
 }
