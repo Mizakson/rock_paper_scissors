@@ -89,6 +89,13 @@ function game() {
         const computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection));
     }
+
+    if (playerScore > computerScore) {
+        return 'You win! Good job!';
+    }
+    else if (computerScore > playerScore) {
+        return 'You lose! Better luck next time!'
+    }
 }
 
 game();
