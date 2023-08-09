@@ -18,3 +18,12 @@ function getComputerChoice() {
     const computerChoice = rpsArray[randomInt];
     return computerChoice;
 }
+
+
+/* 
+playRound function explanation here
+---
+*/
+function playRound(playerSelection, computerSelection) {
+
+}
