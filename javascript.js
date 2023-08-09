@@ -26,8 +26,13 @@ function getComputerChoice() {
 
 
 /* 
-playRound function explanation here
----
+playRound function 
+
+return outcomes based off of playerSelection and computerSelection
+
+rock beats scissors
+paper beats rock
+scissors beats paper
 */
 
 function playRound(playerSelection, computerSelection) {
@@ -64,7 +69,7 @@ const playerSelection = 'rock';
 const computerSelection = getComputerChoice();
 
 function game() {
-    
+
 }
 
 console.log(playRound(playerSelection, computerSelection));
