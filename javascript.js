@@ -3,8 +3,7 @@
 
 // scores
 let playerScore = 0;
-let ComputerScore = 0;
-
+let computerScore = 0;
 
 /*
 getComputerChoice function
@@ -46,21 +45,27 @@ function playRound(playerSelection, computerSelection) {
         return 'DRAW --- scissors ties with scissors';
     }
     else if (playerSelection === 'rock' && computerSelection === 'paper') {
+        computerScore++;
         return 'LOSS --- paper beats rock';
     }
     else if (playerSelection === 'paper' && computerSelection === 'scissors') {
+        computerScore++;
         return 'LOSS --- scissors beats paper';
     }
     else if (playerSelection === 'scissors' && computerSelection === 'rock') {
+        computerScore++;
         return 'LOSS --- rock beats scissors';
     }
     else if (playerSelection === 'rock' && computerSelection === 'scissors') {
+        playerScore++;
         return 'WIN --- rock beats scissors';
     }
     else if (playerSelection === 'paper' && computerSelection === 'rock') {
+        playerScore++;
         return 'WIN --- paper beats rock';
     }
     else if (playerSelection === 'scissors' && computerSelection === 'paper') {
+        playerScore++;
         return 'WIN --- scissors beats paper';
     }
 }
@@ -68,8 +73,22 @@ function playRound(playerSelection, computerSelection) {
 const playerSelection = 'rock';
 const computerSelection = getComputerChoice();
 
-function game() {
+/* 
+game function
 
+for loop to run playRound 5 times
+
+was getting same outcome for computerSelection
+
+adding computerSelection inside of the loop
+makes it so that computerSelection is random each time 
+*/
+
+function game() {
+    for (let i = 0; i < 5; i++) {
+        const computerSelection = getComputerChoice();
+        console.log(playRound(playerSelection, computerSelection));
+    }
 }
 
-console.log(playRound(playerSelection, computerSelection));
+game();
