@@ -79,6 +79,11 @@ was getting same outcome for computerSelection
 
 adding computerSelection inside of the loop
 makes it so that computerSelection is random each time 
+
+playerSelection is also inside of loop to have a different input
+each round
+
+use .toLowerCase() to accept case insensitive input
 */
 
 function game() {
