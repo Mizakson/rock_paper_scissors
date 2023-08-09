@@ -27,12 +27,21 @@ playRound function explanation here
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === 'rock' && computerSelection === 'rock') {
-        return 'DRAW --- rock ties with rock'
+        return 'DRAW --- rock ties with rock';
     }
     else if (playerSelection === 'paper' && computerSelection === 'paper') {
-        return 'DRAW --- paper ties with paper'
+        return 'DRAW --- paper ties with paper';
     }
     else if (playerSelection === 'scissors' && computerSelection === 'scissors') {
-        return 'DRAW --- scissors ties with scissors'
+        return 'DRAW --- scissors ties with scissors';
+    }
+    else if (playerSelection === 'rock' && computerSelection === 'paper') {
+        return 'LOSS --- paper beats rock';
+    }
+    else if (playerSelection === 'paper' && computerSelection === 'scissors') {
+        return 'LOSS --- scissors beats paper';
+    }
+    else if (playerSelection === 'scissors' && computerSelection === 'rock') {
+        return 'LOSS --- rock beats scissors';
     }
 }
