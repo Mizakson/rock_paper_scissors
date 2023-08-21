@@ -5,6 +5,9 @@
 let playerScore = 0;
 let computerScore = 0;
 
+const rockButton = document.querySelector('.rock');
+const paperButton = document.querySelector('.paper');
+const scissorsButton = document.querySelector('.scissors');
 
 function getComputerChoice() {
     const rpsArray = ['rock', 'paper', 'scissors'];
@@ -53,22 +56,41 @@ function playRound(playerSelection, computerSelection) {
 
 
 
-function game() {
-    // for (let i = 0; i < 5; i++) {
-    //     const playerSelection = prompt('Rock, Paper, or Scissors?').toLowerCase();
-    //     const computerSelection = getComputerChoice();
-    //     console.log(playRound(playerSelection, computerSelection));
-    // }
+// function game() {
+//     // for (let i = 0; i < 5; i++) {
+//     //     const playerSelection = prompt('Rock, Paper, or Scissors?').toLowerCase();
+//     //     const computerSelection = getComputerChoice();
+//     //     console.log(playRound(playerSelection, computerSelection));
+//     // }
 
-    if (playerScore > computerScore) {
-        return 'You win! Good job!';
-    }
-    else if (computerScore > playerScore) {
-        return 'You lose! Better luck next time!'
-    }
-    else {
-        return 'You tied! Try again!'
-    }
-}
+//     if (playerScore > computerScore) {
+//         return 'You win! Good job!';
+//     }
+//     else if (computerScore > playerScore) {
+//         return 'You lose! Better luck next time!'
+//     }
+//     else {
+//         return 'You tied! Try again!'
+//     }
+// }
+
+
+rockButton.addEventListener('click', () => {
+    const computerSelection = getComputerChoice();
+    const playerSelection = 'rock';
+    playRound(playerSelection, computerSelection);
+});
+
+paperButton.addEventListener('click', () => {
+    const computerSelection = getComputerChoice();
+    const playerSelection = 'paper';
+    playRound(playerSelection, computerSelection);
+});
+
+scissorsButton.addEventListener('click', () => {
+    const computerSelection = getComputerChoice();
+    const playerSelection = 'scissors';
+});
+
 
 console.log(game());
