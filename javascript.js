@@ -71,6 +71,18 @@ function playRound(playerSelection, computerSelection) {
         p.textContent = 'WIN --- scissors beats paper';
         resultDiv.appendChild(p);
     }
+    if (playerScore === 5 && computerScore < playerScore) {
+        const p = document.createElement('p');
+        p.textContent = 'You win! Good job!';
+        resultDiv.appendChild(p);
+        // window.stop();
+    }
+    else if (computerScore === 5 && playerScore < computerScore) {
+        const p = document.createElement('p');
+        p.textContent = 'You lose! Better luck next time!';
+        resultDiv.appendChild(p);
+        // window.stop(); 
+    }
 }
 
 rockButton.addEventListener('click', () => {
@@ -93,21 +105,16 @@ scissorsButton.addEventListener('click', () => {
 
 
 // function game() {
-//     // for (let i = 0; i < 5; i++) {
-//     //     const playerSelection = prompt('Rock, Paper, or Scissors?').toLowerCase();
-//     //     const computerSelection = getComputerChoice();
-//     //     console.log(playRound(playerSelection, computerSelection));
-//     // }
+// //     // for (let i = 0; i < 5; i++) {
+// //     //     const playerSelection = prompt('Rock, Paper, or Scissors?').toLowerCase();
+// //     //     const computerSelection = getComputerChoice();
+// //     //     console.log(playRound(playerSelection, computerSelection));
+// //     // }
 
-//     if (playerScore > computerScore) {
-//         return 'You win! Good job!';
-//     }
-//     else if (computerScore > playerScore) {
-//         return 'You lose! Better luck next time!'
-//     }
-//     else {
-//         return 'You tied! Try again!'
-//     }
+
+//     // else {
+//     //     return 'You tied! Try again!'
+//     // }
 // }
 
 console.log(game());
