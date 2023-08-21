@@ -87,11 +87,11 @@ use .toLowerCase() to accept case insensitive input
 */
 
 function game() {
-    for (let i = 0; i < 5; i++) {
-        const playerSelection = prompt('Rock, Paper, or Scissors?').toLowerCase();
-        const computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection, computerSelection));
-    }
+    // for (let i = 0; i < 5; i++) {
+    //     const playerSelection = prompt('Rock, Paper, or Scissors?').toLowerCase();
+    //     const computerSelection = getComputerChoice();
+    //     console.log(playRound(playerSelection, computerSelection));
+    // }
 
     if (playerScore > computerScore) {
         return 'You win! Good job!';
