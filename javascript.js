@@ -5,16 +5,6 @@
 let playerScore = 0;
 let computerScore = 0;
 
-/*
-getComputerChoice function
-
-array of possible choices - rock, paper scissors
-
-get a random number using Math.floor and Math.random from 0-2
-number is from 0 to 2 because array indexing starts at 0
-
-computerChoice is a random element of the rpsArray
-*/
 
 function getComputerChoice() {
     const rpsArray = ['rock', 'paper', 'scissors'];
@@ -24,15 +14,6 @@ function getComputerChoice() {
 }
 
 
-/* 
-playRound function 
-
-return outcomes based off of playerSelection and computerSelection
-
-rock beats scissors
-paper beats rock
-scissors beats paper
-*/
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === 'rock' && computerSelection === 'rock') {
@@ -70,21 +51,7 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-/* 
-game function
 
-for loop to run playRound 5 times
-
-was getting same outcome for computerSelection
-
-adding computerSelection inside of the loop
-makes it so that computerSelection is random each time 
-
-playerSelection is also inside of loop to have a different input
-each round
-
-use .toLowerCase() to accept case insensitive input
-*/
 
 function game() {
     // for (let i = 0; i < 5; i++) {
