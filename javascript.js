@@ -21,40 +21,75 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === 'rock' && computerSelection === 'rock') {
-        return 'DRAW --- rock ties with rock';
+        const p = document.createElement('p');
+        p.textContent = 'DRAW --- rock ties with rock';
+        resultDiv.appendChild(p);
     }
     else if (playerSelection === 'paper' && computerSelection === 'paper') {
-        return 'DRAW --- paper ties with paper';
+        const p = document.createElement('p');
+        p.textContent = 'DRAW --- paper ties with paper';
+        resultDiv.appendChild(p);
     }
     else if (playerSelection === 'scissors' && computerSelection === 'scissors') {
-        return 'DRAW --- scissors ties with scissors';
+        const p = document.createElement('p');
+        p.textContent = 'DRAW --- scissors ties with scissors';
+        resultDiv.appendChild(p);
     }
     else if (playerSelection === 'rock' && computerSelection === 'paper') {
         computerScore++;
-        return 'LOSS --- paper beats rock';
+        const p = document.createElement('p');
+        p.textContent = 'LOSS --- paper beats rock';
+        resultDiv.appendChild(p);
     }
     else if (playerSelection === 'paper' && computerSelection === 'scissors') {
         computerScore++;
-        return 'LOSS --- scissors beats paper';
+        const p = document.createElement('p');
+        p.textContent = 'LOSS --- scissors beats paper';
+        resultDiv.appendChild(p);
     }
     else if (playerSelection === 'scissors' && computerSelection === 'rock') {
         computerScore++;
-        return 'LOSS --- rock beats scissors';
+        const p = document.createElement('p');
+        p.textContent = 'LOSS --- rock beats scissors';
+        resultDiv.appendChild(p);
     }
     else if (playerSelection === 'rock' && computerSelection === 'scissors') {
         playerScore++;
-        return 'WIN --- rock beats scissors';
+        const p = document.createElement('p');
+        p.textContent = 'WIN --- rock beats scissors';
+        resultDiv.appendChild(p);
     }
     else if (playerSelection === 'paper' && computerSelection === 'rock') {
         playerScore++;
-        return 'WIN --- paper beats rock';
+        const p = document.createElement('p');
+        p.textContent = 'WIN --- paper beats rock';
+        resultDiv.appendChild(p);
     }
     else if (playerSelection === 'scissors' && computerSelection === 'paper') {
         playerScore++;
-        return 'WIN --- scissors beats paper';
+        const p = document.createElement('p');
+        p.textContent = 'WIN --- scissors beats paper';
+        resultDiv.appendChild(p);
     }
 }
 
+rockButton.addEventListener('click', () => {
+    const computerSelection = getComputerChoice();
+    const playerSelection = 'rock';
+    playRound(playerSelection, computerSelection);
+});
+
+paperButton.addEventListener('click', () => {
+    const computerSelection = getComputerChoice();
+    const playerSelection = 'paper';
+    playRound(playerSelection, computerSelection);
+});
+
+scissorsButton.addEventListener('click', () => {
+    const computerSelection = getComputerChoice();
+    const playerSelection = 'scissors';
+    playRound(playerSelection, computerSelection);
+});
 
 
 // function game() {
@@ -74,24 +109,5 @@ function playRound(playerSelection, computerSelection) {
 //         return 'You tied! Try again!'
 //     }
 // }
-
-
-rockButton.addEventListener('click', () => {
-    const computerSelection = getComputerChoice();
-    const playerSelection = 'rock';
-    playRound(playerSelection, computerSelection);
-});
-
-paperButton.addEventListener('click', () => {
-    const computerSelection = getComputerChoice();
-    const playerSelection = 'paper';
-    playRound(playerSelection, computerSelection);
-});
-
-scissorsButton.addEventListener('click', () => {
-    const computerSelection = getComputerChoice();
-    const playerSelection = 'scissors';
-});
-
 
 console.log(game());
